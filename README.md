@@ -30,10 +30,10 @@ The dataset contains demographic, lifestyle, and purchase behavior information f
 ### 1. Data Cleaning
 
 **Missing Values:**
-- The `Income` column had 24 missing values. Since this was only about 1% of the dataset, and the income distribution was reasonably normal (mean ≈ median), we chose to fill them using the **median imputation** strategy. This preserved data volume without introducing skew.
+- The `Income` column had 24 missing values. Since this was only about 1% of the dataset, and the income distribution was reasonably normal (mean ≈ median), I chose to fill them using the **median imputation** strategy. This preserved data volume without introducing skew.
 
 **Outliers:**
-- We detected one extreme outlier (`Income = 666,666`) far beyond the typical distribution. This value was likely erroneous or a placeholder. Removing it avoided distortion of mean-based analyses and scaling operations later in the pipeline.
+- I detected one extreme outlier (`Income = 666,666`) far beyond the typical distribution. This value was likely erroneous or a placeholder. Removing it avoided distortion of mean-based analyses and scaling operations later in the pipeline.
 
 **Label Cleaning:**
 - Categorical anomalies such as 'YOLO', 'Absurd', and 'Alone' in `Marital_Status` were consolidated into a new label (`Other`) or mapped into standard values (e.g. 'Alone' → 'Single'). Similarly, '2n Cycle' in `Education` was renamed to 'Undergraduate'.
@@ -55,12 +55,12 @@ The dataset contains demographic, lifestyle, and purchase behavior information f
 - **Income Distribution:** Most customers earn between €30,000 and €70,000. A single extreme outlier with income of €666,666 was removed.
 - **Spending Behavior:** There is a strong positive correlation between income and total spending (correlation = 0.79). Customers with higher income tend to spend significantly more.
 - **Children Impact:** Customers with more children tend to spend less, showing a moderate negative correlation (−0.50). This likely reflects more budget-conscious behavior.
-- **Age:** Age has a weak correlation with both income and spending, but older customers tend to spend slightly more on average.
+- **Age:** Age has a weak correlation with income and spending, but older customers tend to spend slightly more on average.
 
 
 - Analyzed income distribution and total spending behavior
-- Identified positive correlation between income and spending
-- Detected inverse relationship between number of children and spending
+- Identified a positive correlation between income and spending
+- Detected an inverse relationship between the number of children and spending
 
 ![Income Distribution](images/income_distribution.png)
 ![Income vs Total Spending](images/income_vs_total_spending.png)
@@ -72,17 +72,17 @@ The dataset contains demographic, lifestyle, and purchase behavior information f
 To discover hidden segments of customers with similar characteristics and behaviors. Clustering allows for customer targeting, campaign personalization, and strategic decision-making without predefined labels.
 
 **Feature Selection:**
-- We used standardized values of `Income`, `Total_Spent`, `Age`, and `Children` — key numeric drivers of customer value and behavior.
+- I used standardized values of `Income`, `Total_Spent`, `Age`, and `Children` — key numeric drivers of customer value and behavior.
 
 **Choosing the Number of Clusters (k):**
-- The **Elbow Method** was used to determine the optimal number of clusters. We plotted the inertia (within-cluster sum of squares) for values of k from 1 to 10.
+- The **Elbow Method** was used to determine the optimal number of clusters. I plotted the inertia (within-cluster sum of squares) for values of k from 1 to 10.
 - The curve showed a distinct 'elbow' at `k = 4`, where adding more clusters had diminishing returns in terms of explained variance.
 
 ![Elbow Method](images/kmeans_elbow_method.png)
 
 **Modeling:**
-- We applied **KMeans clustering** with `k=4` and assigned each customer to one of four segments.
-- To visualize the clustering results, we used **Principal Component Analysis (PCA)** to reduce the feature space to 2D and plotted the segments.
+- I applied **KMeans clustering** with `k=4` and assigned each customer to one of four segments.
+- To visualize the clustering results, I used **Principal Component Analysis (PCA)** to reduce the feature space to 2D and plotted the segments.
 
 ![Customer Segments](images/customer_segments.png)
 
