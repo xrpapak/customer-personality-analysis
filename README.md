@@ -45,7 +45,7 @@ The dataset contains demographic, lifestyle, and purchase behavior information f
 - Identified positive correlation between income and spending
 - Detected inverse relationship between number of children and spending
 
-![Income Distribution](income_distribution.png)
+![Income Distribution](images/income_distribution.png)
 ![Income vs Total Spending](images/income_vs_total_spending.png)
 ![Correlation Matrix](images/correlation_matrix.png)
 
