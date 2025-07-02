@@ -5,7 +5,7 @@ This project showcases a full data wrangling and segmentation workflow using the
 
 ---
 
-## 📁 Dataset Overview
+## Dataset Overview
 
 The dataset contains demographic, lifestyle, and purchase behavior information for 2,240 customers from a multi-channel marketing campaign.
 
@@ -16,7 +16,7 @@ The dataset contains demographic, lifestyle, and purchase behavior information f
 
 ---
 
-## 🔧 Tools Used
+## Tools Used
 
 - **Python 3**
 - **pandas and numpy** for data manipulation
@@ -25,7 +25,7 @@ The dataset contains demographic, lifestyle, and purchase behavior information f
 
 ---
 
-## 🔍 Workflow Summary
+## Workflow Summary
 
 ### 1. Data Cleaning
 
@@ -114,7 +114,7 @@ The PCA visualization shows clear separation between these groups, validating th
 
 ---
 
-## 📘 File Structure
+## File Structure
 
 ```
 .
@@ -129,7 +129,7 @@ The PCA visualization shows clear separation between these groups, validating th
 
 ---
 
-## ✅ What I Learned
+## What I Learned
 
 - How to clean, preprocess, and engineer real-world customer data
 - How to identify patterns using visualizations and correlations
@@ -139,6 +139,6 @@ This project reflects my ability to go from messy raw data to actionable busines
 
 ---
 
-## 📎 Author
+## Author
 
 Christos Papakostas
